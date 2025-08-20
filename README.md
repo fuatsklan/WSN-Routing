@@ -12,6 +12,8 @@ python static_corr_routing.py
 ## 📊 Results
 
 ### Algorithm Comparison
+<img width="4469" height="1769" alt="Image" src="https://github.com/user-attachments/assets/7ed0857e-5d3f-4a4c-ab1f-30cb8323c3a9" />
+
 ```mermaid
 graph TD
     A[Algorithm Comparison Results] --> B[Energy Efficiency]
