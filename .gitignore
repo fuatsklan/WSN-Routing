@@ -94,3 +94,6 @@ Thumbs.db
 config.ini
 secrets.json
 .env
+
+# Helper scripts
+generate_mermaid.py
