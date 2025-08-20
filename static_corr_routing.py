@@ -726,7 +726,7 @@ def compare_algorithms(G, pos, sources, W_raw_val=200.0, Pc_target=0.99,
 
     return results
 
-def plot_comparison_results(results, G, pos):
+def plot_comparison_results(results, G, pos, save_plots=True):
     """
     Create comprehensive plots comparing the algorithms.
     """
@@ -802,6 +802,11 @@ def plot_comparison_results(results, G, pos):
                       f"CAR Routing Tree\n(Energy: {results['car']['energy']:.2e} J/s)")
 
     plt.tight_layout()
+    
+    if save_plots:
+        plt.savefig('algorithm_comparison.png', dpi=300, bbox_inches='tight')
+        print("Algorithm comparison plot saved as 'algorithm_comparison.png'")
+    
     plt.show()
 
 def run_scalability_analysis(max_sources=8, sink_neighbors=2):
@@ -851,7 +856,7 @@ def run_scalability_analysis(max_sources=8, sink_neighbors=2):
     plot_scalability_results(scalability_data)
     return scalability_data
 
-def plot_scalability_results(data):
+def plot_scalability_results(data, save_plots=True):
     """
     Plot scalability analysis results.
     """
@@ -888,6 +893,11 @@ def plot_scalability_results(data):
     ax2.grid(True, alpha=0.3)
 
     plt.tight_layout()
+    
+    if save_plots:
+        plt.savefig('scalability_analysis.png', dpi=300, bbox_inches='tight')
+        print("Scalability analysis plot saved as 'scalability_analysis.png'")
+    
     plt.show()
 
 if __name__ == "__main__":
